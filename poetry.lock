@@ -339,7 +339,7 @@ version = "3.1.7"
 gitdb = ">=4.0.1,<5"
 
 [[package]]
-category = "dev"
+category = "main"
 description = "WSGI HTTP Server for UNIX"
 name = "gunicorn"
 optional = false
@@ -995,7 +995,7 @@ pygments = ">=2.4,<3.0"
 typing_extensions = ">=3.6,<4.0"
 
 [metadata]
-content-hash = "04882a2c0010c745a601e4c6c9bbe386d18ce742bc7e2df25f58df5b91df957a"
+content-hash = "c6c1a0972cc5c3500e79f8c99b1c55bbed0f1ccad815a3243adb94d4294b9967"
 python-versions = "^3.8"
 
 [metadata.files]

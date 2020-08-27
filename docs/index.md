@@ -8,13 +8,13 @@ ___
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 ___
 
-**
-[Documentation](https://greenbird.github.io/piri-web/) |
+**[Documentation](https://greenbird.github.io/piri-web/) |
 [Source Code](https://github.com/greenbird/piri-web) |
-[Task Tracker](https://github.com/greenbird/piri-web/issues)
-**
+[Task Tracker](https://github.com/greenbird/piri-web/issues)**
 
 
 # Deploying
 
 ## Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
