@@ -5,16 +5,13 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.6, 3.7, 3.8]
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python 3.8
       uses: actions/setup-python@v1
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: 3.8
 
     - name: Install poetry
       run: |
@@ -24,7 +21,7 @@ jobs:
       uses: actions/cache@v1
       with:
         path: .venv
-        key: venv-${{ matrix.python-version }}-${{ hashFiles('poetry.lock') }}
+        key: venv-${{ hashFiles('poetry.lock') }}
     - name: Install dependencies
       run: |
         source "$HOME/.poetry/env"
