@@ -1,0 +1,116 @@
+{
+    "name": "schema",
+    "array": false,
+    "attributes": [
+        {
+            "name": "name",
+            "mappings": [
+                {
+                    "path": ["key"],
+                    "if_statements": [
+                        {
+                            "condition": "is",
+                            "target": "val1",
+                            "then": null
+                        }
+                    ],
+                    "default": "default"
+                },
+                {
+                    "path": ["key2"],
+                    "if_statements": [
+                        {
+                            "condition": "is",
+                            "target": "val2",
+                            "then": "if"
+                        }
+                    ]
+                }
+            ],
+            "separator": "-",
+            "if_statements": [
+                {
+                    "condition": "is",
+                    "target": "default-if",
+                    "then": null
+                }
+            ],
+            "default": "default2"
+        }
+    ],
+    "objects": [
+        {
+            "name": "address",
+            "array": false,
+            "attributes": [
+                {
+                    "name": "address1",
+                    "mappings": [
+                        {
+                            "path": ["a1"]
+                        }
+                    ]
+                },
+                {
+                    "name": "address2",
+                    "mappings": [
+                        {
+                            "path": ["a2"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "people",
+            "array": true,
+            "path_to_iterable": ["persons"],
+            "attributes": [
+                {
+                    "name": "firstname",
+                    "mappings": [
+                        {
+                            "path": ["persons", "name"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "branching_objects": [
+        {
+            "name": "extrafield",
+            "array": true,
+            "branching_attributes": [
+                [
+                    {
+                        "name": "dataname",
+                        "default": "one"
+                    },
+                    {
+                        "name": "datavalue",
+                        "mappings": [
+                            {
+                                "path": ["extra", "extra1"]
+                            }
+                        ]
+                    }
+                ],
+                [
+                    {
+                        "name": "dataname",
+                        "default": "two"
+                    },
+                    {
+                        "name": "datavalue",
+                        "mappings": [
+                            {
+                                "path": ["extra", "extra2"]
+                            }
+                        ]
+                    }
+                ]
+            ]
+        }
+    ]
+}

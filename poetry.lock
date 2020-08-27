@@ -340,6 +340,23 @@ gitdb = ">=4.0.1,<5"
 
 [[package]]
 category = "dev"
+description = "WSGI HTTP Server for UNIX"
+name = "gunicorn"
+optional = false
+python-versions = ">=3.4"
+version = "20.0.4"
+
+[package.dependencies]
+setuptools = ">=3.0"
+
+[package.extras]
+eventlet = ["eventlet (>=0.9.7)"]
+gevent = ["gevent (>=0.13)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
+category = "dev"
 description = "Internationalized Domain Names in Applications (IDNA)"
 name = "idna"
 optional = false
@@ -614,7 +631,7 @@ description = "Configurable and documentable Json transformation and mapping"
 name = "piri"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "1.0.1"
+version = "1.0.2"
 
 [package.dependencies]
 jsonschema = ">=3.2.0,<4.0.0"
@@ -978,7 +995,7 @@ pygments = ">=2.4,<3.0"
 typing_extensions = ">=3.6,<4.0"
 
 [metadata]
-content-hash = "9078c381d12a9f4c57b5cbba5fd58bc827256dd358517f8b712f64f04d64e857"
+content-hash = "04882a2c0010c745a601e4c6c9bbe386d18ce742bc7e2df25f58df5b91df957a"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -1144,6 +1161,10 @@ gitpython = [
     {file = "GitPython-3.1.7-py3-none-any.whl", hash = "sha256:fa3b92da728a457dd75d62bb5f3eb2816d99a7fe6c67398e260637a40e3fafb5"},
     {file = "GitPython-3.1.7.tar.gz", hash = "sha256:2db287d71a284e22e5c2846042d0602465c7434d910406990d5b74df4afb0858"},
 ]
+gunicorn = [
+    {file = "gunicorn-20.0.4-py2.py3-none-any.whl", hash = "sha256:cd4a810dd51bf497552cf3f863b575dabd73d6ad6a91075b65936b151cbf4f9c"},
+    {file = "gunicorn-20.0.4.tar.gz", hash = "sha256:1904bb2b8a43658807108d59c3f3d56c2b6121a701161de0ddf9ad140073c626"},
+]
 idna = [
     {file = "idna-2.10-py2.py3-none-any.whl", hash = "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"},
     {file = "idna-2.10.tar.gz", hash = "sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6"},
@@ -1270,8 +1291,8 @@ pep8-naming = [
     {file = "pep8_naming-0.9.1-py2.py3-none-any.whl", hash = "sha256:45f330db8fcfb0fba57458c77385e288e7a3be1d01e8ea4268263ef677ceea5f"},
 ]
 piri = [
-    {file = "piri-1.0.1-py3-none-any.whl", hash = "sha256:68901dde4813470c27f31df230cdd9f2e073673091812e0e9fc4975b8db44d92"},
-    {file = "piri-1.0.1.tar.gz", hash = "sha256:b6a1e5d0fbda2fa1676eadf3c6ad98b2b7d87c4ca24b3f7e77eb2d13f89011a1"},
+    {file = "piri-1.0.2-py3-none-any.whl", hash = "sha256:1f46b5c64ba70401b338e73a2d3e38d667290a7a9a5e9f2e6a43bed3e63ac01a"},
+    {file = "piri-1.0.2.tar.gz", hash = "sha256:23ca735bfcace00aeab140476a329652288a6f1878c326794e3080aa77ee9b7c"},
 ]
 pluggy = [
     {file = "pluggy-0.13.1-py2.py3-none-any.whl", hash = "sha256:966c145cd83c96502c3c3868f50408687b38434af77734af1e9ca461a4081d2d"},
