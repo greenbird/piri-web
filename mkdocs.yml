@@ -1,0 +1,33 @@
+---
+strict: true
+site_name: piri-web
+site_description: Configurable json to json mapping api server
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: green
+    accent: deep-orange
+  icon:
+    logo: material/language-python
+  language: en
+  features:
+    - tabs
+repo_name: greenbird/piri-web
+repo_url: https://github.com/greenbird/piri-web
+edit_uri: ""
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+nav:
+  - Home:
+      - Home: index.md
+      - Contributing: contributing.md
+      - Changelog: changelog.md
