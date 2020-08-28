@@ -22,4 +22,4 @@ WORKDIR /app
 # webserver, with one worker process and 2 threads.
 # For environments with multiple CPU cores, increase the number of workers
 # to be equal to the cores available.
-CMD exec gunicorn --bind :1010 --workers 1 --threads 2 'app:application'
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 2 'app:application'
