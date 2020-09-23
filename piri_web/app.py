@@ -18,7 +18,7 @@ def create_success_response(body, *args, **kwargs) -> Response:
 def create_failure_response(failure: Exception) -> Response:
     """Return failure response."""
     error_message = '{failure}'.format(
-        failure=failure.args[0],
+        failure=failure,
     )
     return ({'error': error_message}, falcon.HTTP_400)
 
