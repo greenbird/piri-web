@@ -1,0 +1,14 @@
+{
+    "name": "games",
+    "array": true,
+    "attributes": [
+        {
+            "name": "pgn",
+            "mappings": [
+                {
+                    "path": ["pgn"]
+                }
+            ]
+        }
+    ]
+}

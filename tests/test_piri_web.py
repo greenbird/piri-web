@@ -59,3 +59,42 @@ def test_post_empty_data_map(client):
 
     assert response.status == falcon.HTTP_BAD_REQUEST
     assert response.headers.get('content-type') == falcon.MEDIA_JSON
+
+
+def test_post_bad_config_map(client, bad_configuration):
+    """Test that we return consistent error when data cannot be mapped."""
+    json_data = {
+        'configuration': bad_configuration,
+        'data': {
+            'games': [
+                {
+                    'black': {
+                        '@id': 'https://api.chess.com/pub/player/chameleoniasa',
+                        'rating': 1576,
+                        'result': 'win',
+                        'username': 'ChameleonIASA',
+                    },
+                    'end_time': 1585747447,
+                    'fen': '4r2k/1p2b2p/5pp1/2p5/P1nBP3/2P5/1P3PP1/4R1K1 w - -',
+                    'pgn': '0-1',
+                    'rated': 'true',
+                    'rules': 'chess',
+                    'time_class': 'blitz',
+                    'time_control': '300+5',
+                    'url': 'https://www.chess.com/live/game/4665045894',
+                    'white': {
+                        '@id': 'https://api.chess.com/pub/player/michael_974',
+                        'rating': 1572,
+                        'result': 'resigned',
+                        'username': 'Michael_974',
+                    },
+                },
+            ],
+        },
+    }
+
+    response = client.simulate_post(
+        body=json.dumps(json_data),
+    )
+
+    assert response.status == falcon.HTTP_BAD_REQUEST
