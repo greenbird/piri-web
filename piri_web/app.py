@@ -9,9 +9,9 @@ from returns.result import safe
 
 
 @safe
-def create_success_response(*args, **kwargs) -> Response:
+def create_success_response(body, *args, **kwargs) -> Response:
     """Return success response."""
-    return (args, falcon.HTTP_200)
+    return (body, falcon.HTTP_200)
 
 
 @safe
@@ -45,7 +45,7 @@ class Mapper(object):
             post_data['data'],
             post_data['configuration'],
         ).bind(
-            create_failure_response,
+            create_success_response,
         ).rescue(
             create_failure_response,
         ).unwrap()
