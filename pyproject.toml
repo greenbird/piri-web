@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "piri-web"
-version = "0.1.0"
+version = "0.2.0"
 description = "Piri Json to Json API Server"
 authors = ["Thomas Borgen <thomas@borgenit.no>"]
 
@@ -22,6 +22,8 @@ mypy = "^0.782"
 safety = "^1.9.0"
 # docs
 mkdocs-material = "^5.5.8"
+gunicorn = "^20.0.4"
+pre-commit = "^2.7.1"
 
 [build-system]
 requires = ["poetry>=0.12"]

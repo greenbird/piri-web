@@ -20,3 +20,13 @@ def configuration():
         config_data = json.load(config_file)
 
     return config_data
+
+
+@pytest.fixture(scope='session')
+def bad_configuration():
+    """Load json wrong configuration."""
+    config_data = {}
+    with open('tests/bad_config.json') as config_file:
+        config_data = json.load(config_file)
+
+    return config_data
