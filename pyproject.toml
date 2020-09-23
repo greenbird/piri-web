@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "piri-web"
-version = "0.1.0"
+version = "0.2.0"
 description = "Piri Json to Json API Server"
 authors = ["Thomas Borgen <thomas@borgenit.no>"]
 
